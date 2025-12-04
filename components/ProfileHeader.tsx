@@ -55,9 +55,11 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ profile }) => {
         </div>
       )}
       
-      <p className="text-slate-600 max-w-xs leading-relaxed text-sm sm:text-base mb-4">
-        {profile.bio}
-      </p>
+      {profile.bio && (
+        <p className="text-slate-600 max-w-xs leading-relaxed text-sm sm:text-base mb-4">
+          {profile.bio}
+        </p>
+      )}
 
       {profile.promotionalBannerUrl && (
         <div className="w-full mt-2 mb-2 overflow-hidden rounded-xl shadow-md border border-white/40">
